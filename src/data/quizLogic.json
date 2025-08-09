@@ -1,0 +1,119 @@
+{
+  "adaptiveQuizSystem": {
+    "userLevels": {
+      "beginner": {
+        "scoreRange": "0-40%",
+        "questionDifficulty": ["easy", "easy", "medium"],
+        "feedbackStyle": "encouraging",
+        "amharicSupport": "high"
+      },
+      "intermediate": {
+        "scoreRange": "41-70%",
+        "questionDifficulty": ["easy", "medium", "medium", "hard"],
+        "feedbackStyle": "balanced",
+        "amharicSupport": "medium"
+      },
+      "advanced": {
+        "scoreRange": "71-100%",
+        "questionDifficulty": ["medium", "hard", "hard"],
+        "feedbackStyle": "challenging",
+        "amharicSupport": "low"
+      }
+    },
+    "questionBank": {
+      "ethiopianHistory": [
+        {
+          "id": "hist_001",
+          "difficulty": "easy",
+          "question": "What is the ancient name of Ethiopia?",
+          "options": ["Abyssinia", "Nubia", "Kush", "Axum"],
+          "correctAnswer": 0,
+          "amharicFeedback": {
+            "correct": "ትክክል! Abyssinia ሀገራችን የቀደመ ስም ነው!",
+            "incorrect": "ይቅርታ! Abyssinia የኢትዮጵያ የቀደመ ስም ነው።"
+          }
+        },
+        {
+          "id": "hist_002", 
+          "difficulty": "medium",
+          "question": "Which emperor is known for defeating the Italians at the Battle of Adwa?",
+          "options": ["Menelik II", "Haile Selassie", "Tewodros II", "Yohannes IV"],
+          "correctAnswer": 0,
+          "amharicFeedback": {
+            "correct": "Betam gobez! ንጉሥ ምኒልክ በዓድዋ ጦርነት አሸንፈዋል!",
+            "incorrect": "ንጉሥ ምኒልክ II በ1896 በዓድዋ ጦርነት ጣሊያንን አሸንፈዋል።"
+          }
+        }
+      ],
+      "geography": [
+        {
+          "id": "geo_001",
+          "difficulty": "easy", 
+          "question": "What is the highest mountain in Ethiopia?",
+          "options": ["Ras Dashen", "Mount Batu", "Mount Abuna Yosef", "Mount Guna"],
+          "correctAnswer": 0,
+          "amharicFeedback": {
+            "correct": "ትክክል! ራስ ዳሸን ኢትዮጵያ ውስጥ በጣም ከፍ ያለ ተራራ ነው!",
+            "incorrect": "ራስ ዳሸን ከ4,550 ሜትር ከፍታ ጋር ኢትዮጵያ ውስጥ በጣም ከፍ ያለ ተራራ ነው።"
+          }
+        }
+      ],
+      "culture": [
+        {
+          "id": "cult_001",
+          "difficulty": "medium",
+          "question": "What is the traditional Ethiopian coffee ceremony called?",
+          "options": ["Buna ceremony", "Tej ceremony", "Injera making", "Timkat"],
+          "correctAnswer": 0,
+          "amharicFeedback": {
+            "correct": "Gobez neh! የቡና ሥነ ሥርዓት የኢትዮጵያ ባህል ነው!",
+            "incorrect": "የቡና ሥነ ሥርዓት ባህላዊ የኢትዮጵያ የቡና ዝግጅት ሂደት ነው።"
+          }
+        }
+      ]
+    },
+    "scoringSystem": {
+      "pointsPerCorrect": {
+        "easy": 10,
+        "medium": 20, 
+        "hard": 30
+      },
+      "bonusMultipliers": {
+        "streak": 1.5,
+        "perfectScore": 2.0,
+        "timeBonus": 1.2
+      },
+      "gobezScoreConversion": {
+        "quizPoints": 1,
+        "gobezPoints": 1
+      }
+    },
+    "adaptationRules": {
+      "performanceTracking": {
+        "recentQuizzes": 5,
+        "accuracyThreshold": 0.7,
+        "speedThreshold": 30
+      },
+      "difficultyAdjustment": {
+        "increaseCondition": "accuracy > 0.8 AND speed < 20s",
+        "decreaseCondition": "accuracy < 0.5 OR speed > 45s",
+        "maintainCondition": "0.5 <= accuracy <= 0.8"
+      }
+    },
+    "amharicPhrases": {
+      "encouragement": [
+        "Gobez neh! ጎበዝ ነህ!",
+        "Betam konjo! በጣም ቆንጆ!",
+        "Weyz ena! ዋይዝ እና!",
+        "Selam! Keep going! ሰላም!",
+        "Abate! Excellent! አባቴ!"
+      ],
+      "motivation": [
+        "ተጨማሪ ልምምድ ያድርጉ!",
+        "ቀጣይ ትምህርት ይማሩ!",
+        "እንቀጥል ጎበዝ!",
+        "በርቱ እግዚአብሔር ይርዳዎት!"
+      ]
+    }
+  }
+}

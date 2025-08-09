@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Gobez Ethiopian Learning Platform Design System
+   Inspired by Ethiopian flag colors and cultural motifs
+   All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Ethiopian-inspired color palette */
+    --background: 50 20% 98%;
+    --foreground: 25 15% 15%;
+
+    --card: 50 30% 96%;
+    --card-foreground: 25 15% 15%;
+
+    --popover: 50 30% 96%;
+    --popover-foreground: 25 15% 15%;
+
+    /* Ethiopian Green (diffused) */
+    --primary: 152 85% 35%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Ethiopian Yellow (diffused) */  
+    --secondary: 49 90% 85%;
+    --secondary-foreground: 25 15% 15%;
+
+    --muted: 50 25% 92%;
+    --muted-foreground: 25 10% 45%;
+
+    /* Ethiopian Red (diffused) */
+    --accent: 357 75% 88%;
+    --accent-foreground: 25 15% 15%;
+
+    --destructive: 357 85% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 50 20% 87%;
+    --input: 50 20% 90%;
+    --ring: 152 85% 35%;
+
+    --radius: 0.75rem;
+
+    /* Gobez-specific design tokens */
+    --gobez-green: 152 85% 35%;
+    --gobez-yellow: 49 90% 75%;
+    --gobez-red: 357 85% 65%;
+    --gobez-gold: 42 95% 70%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(152 85% 35%) 0%, hsl(49 90% 75%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(50 30% 98%) 0%, hsl(50 25% 94%) 100%);
+    
+    /* Shadows with Ethiopian warmth */
+    --shadow-soft: 0 4px 20px -4px hsl(49 90% 75% / 0.3);
+    --shadow-card: 0 8px 32px -8px hsl(152 85% 35% / 0.15);
+    
+    /* Sidebar using Gobez theme */
+    --sidebar-background: 50 25% 96%;
+    --sidebar-foreground: 25 15% 15%;
+    --sidebar-primary: 152 85% 35%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 49 90% 85%;
+    --sidebar-accent-foreground: 25 15% 15%;
+    --sidebar-border: 50 20% 87%;
+    --sidebar-ring: 152 85% 35%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', 'Noto Sans Ethiopic', sans-serif;
+  }
+}
+
+@layer components {
+  /* Gobez-specific component styles */
+  .gobez-hero-gradient {
+    background: var(--gradient-hero);
+  }
+  
+  .gobez-card {
+    background: var(--gradient-card);
+    box-shadow: var(--shadow-card);
+  }
+  
+  .gobez-soft-shadow {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .ethiopian-motif {
+    position: relative;
+  }
+  
+  .ethiopian-motif::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23F7DC6F' fill-opacity='0.05'%3E%3Cpath d='M20 0L24 8L32 4L28 12L40 8L36 16L40 24L32 20L28 28L24 20L20 40L16 32L8 36L12 28L0 32L4 24L0 16L8 20L12 12L16 20Z'/%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  .ethiopian-motif > * {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Smooth animations for Gobez UI */
+  .gobez-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .gobez-hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-card);
+  }
+}
