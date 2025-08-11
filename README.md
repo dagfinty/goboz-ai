@@ -79,7 +79,7 @@ The MVP will focus on:
 ## 🛠 Tech Stack
 
 
-- **Frontend:** Next.js (React), Tailwind CSS, ShadCN UI
+- **Frontend:** React, Tailwind CSS,Typescript, ShadCN UI
 
 
 - **Backend:** Node.js + Express (or Supabase for serverless)
